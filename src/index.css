@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --linho: #f5f1ea;
+  --creme: #f1e5d6;
+  --damasco: #f0d2b0;
+  --grafite: #1f1a18;
+  --vinho: #6d1f34;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--linho);
+  color: var(--grafite);
+  font-family: 'Work Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-up {
+  animation: revealUp 0.8s ease-out both;
+}
+
+.animation-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.ambient-shape {
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+  width: 280px;
+  height: 280px;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.35;
+}
+
+.ambient-shape-left {
+  left: -80px;
+  top: 100px;
+  background: #d6a075;
+}
+
+.ambient-shape-right {
+  right: -80px;
+  top: 40%;
+  background: #a8485f;
+}
