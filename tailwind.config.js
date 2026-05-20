@@ -7,15 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        linho: '#f5f1ea',
-        creme: '#f1e5d6',
-        damasco: '#f0d2b0',
-        grafite: '#1f1a18',
-        vinho: '#6d1f34',
+        linho: '#eef2ea',
+        creme: '#dfe8da',
+        damasco: '#b8cda8',
+        grafite: '#152019',
+        vinho: '#2f6b4f',
       },
       fontFamily: {
-        sans: ['Work Sans', 'sans-serif'],
-        display: ['Bodoni Moda', 'serif'],
+        sans: ['Manrope', 'sans-serif'],
+        display: ['Cormorant Garamond', 'serif'],
       },
     },
   },

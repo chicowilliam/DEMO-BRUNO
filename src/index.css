@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
-  --linho: #f1ece3;
-  --creme: #e9ddcb;
-  --damasco: #d6b893;
-  --grafite: #1b1714;
-  --vinho: #612638;
+  --linho: #eef2ea;
+  --creme: #dfe8da;
+  --damasco: #b8cda8;
+  --grafite: #152019;
+  --vinho: #2f6b4f;
+  --ink-rgb: 21, 32, 25;
 }
 
 * {
@@ -21,8 +22,8 @@ body,
 
 body {
   background:
-    radial-gradient(circle at 10% 10%, rgba(214, 184, 147, 0.15) 0, rgba(214, 184, 147, 0) 40%),
-    radial-gradient(circle at 90% 80%, rgba(97, 38, 56, 0.12) 0, rgba(97, 38, 56, 0) 35%),
+    radial-gradient(circle at 10% 10%, rgba(184, 205, 168, 0.2) 0, rgba(184, 205, 168, 0) 42%),
+    radial-gradient(circle at 90% 80%, rgba(47, 107, 79, 0.12) 0, rgba(47, 107, 79, 0) 38%),
     var(--linho);
   color: var(--grafite);
   font-family: 'Manrope', sans-serif;
@@ -73,19 +74,19 @@ a {
   font-size: 0.68rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(27, 23, 20, 0.6);
+  color: rgba(var(--ink-rgb), 0.62);
 }
 
 .editorial-ticker {
-  border-top: 1px solid rgba(27, 23, 20, 0.2);
-  border-bottom: 1px solid rgba(27, 23, 20, 0.2);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.2);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.2);
   padding: 0.85rem 0;
   overflow: hidden;
   white-space: nowrap;
   font-size: 0.66rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(27, 23, 20, 0.75);
+  color: rgba(var(--ink-rgb), 0.75);
 }
 
 .photo-slot {
@@ -97,7 +98,7 @@ a {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: rgba(27, 23, 20, 0.58);
+  color: rgba(var(--ink-rgb), 0.58);
 }
 
 .media-frame {
@@ -106,8 +107,8 @@ a {
   min-height: 220px;
   max-height: 340px;
   object-fit: cover;
-  border-top: 1px solid rgba(27, 23, 20, 0.2);
-  border-bottom: 1px solid rgba(27, 23, 20, 0.2);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.2);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.2);
 }
 
 .media-composition {
@@ -143,12 +144,12 @@ a {
 .media-note {
   margin: 0;
   align-self: end;
-  border-top: 1px solid rgba(27, 23, 20, 0.2);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.2);
   padding-top: 0.9rem;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: rgba(27, 23, 20, 0.65);
+  color: rgba(var(--ink-rgb), 0.65);
 }
 
 .photo-placeholder {
@@ -156,12 +157,12 @@ a {
   min-height: 190px;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid rgba(27, 23, 20, 0.2);
-  border-bottom: 1px solid rgba(27, 23, 20, 0.2);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.2);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.2);
   font-size: 0.75rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(27, 23, 20, 0.56);
+  color: rgba(var(--ink-rgb), 0.56);
 }
 
 @media (min-width: 900px) {
