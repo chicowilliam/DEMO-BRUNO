@@ -23,28 +23,28 @@ const schedule = [
   { date: '24/05 • 13:00', title: 'Contraponto de Encontro: Brás Cubas', price: 'R$ 40 ou livro' },
 ]
 
-const mediaAssets = [
-  {
+const mediaAssets = {
+  facade: {
     src: new URL('./assets/hero.png', import.meta.url).href,
     type: 'image',
     label: 'Fachada e identidade da casa',
   },
-  {
+  prato: {
     src: new URL('./assets/prato vegano.jpg', import.meta.url).href,
     type: 'image',
     label: 'Prato vegano',
   },
-  {
+  calcada: {
     src: new URL('./assets/calçada do cafe.mp4', import.meta.url).href,
     type: 'video',
     label: 'Calcada do cafe',
   },
-  {
+  carpaccio: {
     src: new URL('./assets/video do carpaccio.mp4', import.meta.url).href,
     type: 'video',
     label: 'Video do carpaccio',
   },
-]
+}
 
 const news = [
   'Manual de Conduta do Café com Letras em versão preliminar para discussão interna.',
@@ -182,17 +182,33 @@ function App() {
           <p className="mt-4 max-w-2xl text-grafite/75">
             Midias ja conectadas diretamente da pasta assets para apresentar atmosfera, pratos e movimento da casa.
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {mediaAssets.map((item) => (
-              <figure key={item.label} className="photo-slot">
-                {item.type === 'video' ? (
-                  <video className="media-frame" src={item.src} autoPlay loop muted playsInline controls={false} />
-                ) : (
-                  <img className="media-frame" src={item.src} alt={item.label} loading="lazy" />
-                )}
-                <figcaption>{item.label}</figcaption>
+
+          <div className="media-composition mt-10">
+            <figure className="photo-slot media-lead">
+              <video className="media-frame media-frame-lead" src={mediaAssets.carpaccio.src} autoPlay loop muted playsInline controls={false} />
+              <figcaption>{mediaAssets.carpaccio.label}</figcaption>
+            </figure>
+
+            <div className="media-side-stack">
+              <figure className="photo-slot">
+                <img className="media-frame media-frame-tall" src={mediaAssets.facade.src} alt={mediaAssets.facade.label} loading="lazy" />
+                <figcaption>{mediaAssets.facade.label}</figcaption>
               </figure>
-            ))}
+              <figure className="photo-slot">
+                <video className="media-frame" src={mediaAssets.calcada.src} autoPlay loop muted playsInline controls={false} />
+                <figcaption>{mediaAssets.calcada.label}</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div className="media-strip mt-6">
+            <figure className="photo-slot media-strip-item">
+              <img className="media-frame media-frame-wide" src={mediaAssets.prato.src} alt={mediaAssets.prato.label} loading="lazy" />
+              <figcaption>{mediaAssets.prato.label}</figcaption>
+            </figure>
+            <p className="media-note">
+              Fluxo visual recomendado: abrir com movimento do preparo, apresentar o espaco e fechar com assinatura de prato.
+            </p>
           </div>
         </section>
 
