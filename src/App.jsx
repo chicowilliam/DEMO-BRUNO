@@ -62,142 +62,163 @@ const gallery = [
 function App() {
   return (
     <div className="min-h-screen bg-linho text-grafite">
-      <div className="ambient-shape ambient-shape-left" aria-hidden="true" />
-      <div className="ambient-shape ambient-shape-right" aria-hidden="true" />
-
-      <header className="sticky top-0 z-30 border-b border-grafite/10 bg-linho/90 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-8">
-          <a href="#inicio" className="font-display text-xl tracking-wide md:text-2xl">
+      <header className="sticky top-0 z-30 border-b border-grafite/15 bg-linho/95 backdrop-blur">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-5 md:px-10">
+          <a href="#inicio" className="font-display text-xl tracking-[0.18em] md:text-2xl">
             CAFE COM LETRAS
           </a>
-          <nav className="hidden gap-6 text-sm uppercase tracking-widest md:flex">
-            <a href="#cardapio" className="hover:text-vinho">Cardapio</a>
-            <a href="#programacao" className="hover:text-vinho">Programacao</a>
-            <a href="#eventos" className="hover:text-vinho">Eventos</a>
-            <a href="#noticias" className="hover:text-vinho">Noticias</a>
-            <a href="#sobre" className="hover:text-vinho">Sobre</a>
-            <a href="#contato" className="hover:text-vinho">Contato</a>
+          <nav className="hidden gap-8 text-[11px] uppercase tracking-[0.24em] md:flex">
+            <a href="#cardapio" className="opacity-75 transition hover:opacity-100">Cardapio</a>
+            <a href="#programacao" className="opacity-75 transition hover:opacity-100">Programacao</a>
+            <a href="#eventos" className="opacity-75 transition hover:opacity-100">Eventos</a>
+            <a href="#sobre" className="opacity-75 transition hover:opacity-100">Sobre</a>
+            <a href="#contato" className="opacity-75 transition hover:opacity-100">Contato</a>
           </nav>
         </div>
       </header>
 
-      <main>
-        <section id="inicio" className="mx-auto grid max-w-6xl gap-8 px-4 pb-14 pt-14 md:grid-cols-2 md:px-8 md:pt-20">
-          <div className="space-y-6 reveal-up">
-            <span className="inline-block rounded-full border border-vinho/30 bg-vinho/10 px-4 py-1 text-xs uppercase tracking-[0.2em] text-vinho">
-              Demo conceitual 2026
-            </span>
-            <h1 className="font-display text-4xl leading-tight md:text-6xl">
-              Cultura, gastronomia e noite viva no coracao da Savassi.
-            </h1>
-            <p className="max-w-xl text-base text-grafite/80 md:text-lg">
-              Estrutura inspirada em referenciais premium de lifestyle: narrativa forte, ritmo visual, blocos editoriais e foco em experiencia mobile-first.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a href="#eventos" className="rounded-full bg-vinho px-6 py-3 text-sm font-semibold uppercase tracking-wider text-linho transition hover:bg-vinho/90">
-                Ver eventos
-              </a>
-              <a href="#contato" className="rounded-full border border-grafite/30 px-6 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-vinho hover:text-vinho">
-                Reservar mesa
-              </a>
+      <main className="pb-24">
+        <section id="inicio" className="mx-auto max-w-7xl px-4 pb-20 pt-14 md:px-10 md:pt-20">
+          <p className="editorial-ticker">CAFE COM LETRAS • SAVASSI • CULTURA + GASTRONOMIA • CAFE COM LETRAS • SAVASSI • CULTURA + GASTRONOMIA</p>
+
+          <div className="mt-10 grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-end">
+            <div className="reveal-up">
+              <p className="section-kicker">Belo Horizonte desde 1996</p>
+              <h1 className="font-display text-[2.8rem] leading-[0.95] tracking-tight md:text-[6.1rem]">
+                O encontro entre literatura, cozinha e noites que ficam na memoria.
+              </h1>
+            </div>
+
+            <div className="reveal-up animation-delay-1 space-y-8">
+              <p className="max-w-md text-base leading-relaxed text-grafite/80">
+                Uma versao com direcao visual editorial: ritmo de revista, tipografia marcante, narrativa autoral e fluxo continuo entre cardapio, agenda e historia.
+              </p>
+              <div className="space-y-3 text-sm uppercase tracking-[0.2em]">
+                <div className="flex items-center justify-between border-b border-grafite/15 pb-3">
+                  <span className="text-grafite/60">Dom a qui</span>
+                  <span className="font-semibold">12h - 22h</span>
+                </div>
+                <div className="flex items-center justify-between border-b border-grafite/15 pb-3">
+                  <span className="text-grafite/60">Sex e sab</span>
+                  <span className="font-semibold">12h - 23h</span>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="reveal-up animation-delay-1 flex flex-col gap-8 md:gap-12">
+        <section id="cardapio" className="mx-auto max-w-7xl px-4 py-16 md:px-10">
+          <div className="editorial-grid">
             <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-vinho mb-2">Destaque da semana</p>
-              <h2 className="font-display text-3xl md:text-4xl leading-tight max-w-lg">Savassi Festival ocupando a casa com jazz contemporâneo.</h2>
+              <p className="section-kicker">Cardapio</p>
+              <h2 className="font-display text-4xl leading-tight md:text-6xl">Sabores sazonais com acento autoral.</h2>
             </div>
-            <div className="flex flex-wrap gap-8 text-lg">
-              <div>
-                <span className="block text-xs uppercase tracking-widest text-grafite/60">Dom a qui</span>
-                <span className="block font-display text-2xl">12h - 22h</span>
-                <span className="block text-sm text-grafite/70">Presencial</span>
-              </div>
-              <div>
-                <span className="block text-xs uppercase tracking-widest text-grafite/60">Sex e sáb</span>
-                <span className="block font-display text-2xl">12h - 23h</span>
-                <span className="block text-sm text-grafite/70">Casa aberta até tarde</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="cardapio" className="mx-auto max-w-4xl px-4 py-14 md:px-8">
-          <h2 className="font-display text-3xl md:text-4xl mb-8">Cardápio da semana</h2>
-          <div className="space-y-8">
-            {menuHighlights.map((item) => (
-              <div key={item.date} className="flex flex-col md:flex-row md:items-baseline md:gap-8">
-                <span className="text-xs uppercase tracking-widest text-vinho min-w-[120px]">{item.day} • {item.date}</span>
-                <span className="font-medium text-lg leading-relaxed">{item.dish}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="programacao" className="mx-auto max-w-4xl px-4 py-14 md:px-8">
-          <h2 className="font-display text-3xl md:text-4xl mb-8">Programação</h2>
-          <div className="space-y-6">
-            {schedule.map((item) => (
-              <div key={item.title} className="flex flex-col md:flex-row md:items-baseline md:gap-8">
-                <span className="text-xs uppercase tracking-widest text-vinho min-w-[140px]">{item.date}</span>
-                <span className="font-medium text-lg leading-relaxed">{item.title}</span>
-                <span className="text-sm text-grafite/60 ml-2">{item.price}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="eventos" className="mx-auto max-w-4xl px-4 py-14 md:px-8">
-          <h2 className="font-display text-3xl md:text-4xl mb-8">Eventos em destaque</h2>
-          <div className="space-y-10">
-            {upcomingEvents.map((event) => (
-              <div key={event.title} className="flex flex-col gap-2">
-                <span className="text-xs uppercase tracking-widest text-vinho">{event.when}</span>
-                <span className="font-display text-2xl md:text-3xl leading-snug">{event.title}</span>
-                <span className="text-base text-grafite/80 max-w-2xl">{event.description}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="noticias" className="mx-auto max-w-4xl px-4 py-14 md:px-8">
-          <h2 className="font-display text-3xl md:text-4xl mb-8">Notícias</h2>
-          <ul className="space-y-6">
-            {news.map((item) => (
-              <li key={item} className="text-base leading-relaxed border-l-4 border-vinho pl-4">{item}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section id="sobre" className="mx-auto max-w-4xl px-4 py-14 md:px-8">
-          <h2 className="font-display text-3xl md:text-4xl mb-8">Sobre o Café</h2>
-          <div className="space-y-6">
-            <p className="leading-relaxed text-grafite/80">
-              Fundado em 1996, o Café com Letras se consolidou como um polo cultural em Belo Horizonte. Esta versão demo prioriza narrativa editorial, clareza de navegação e uma atmosfera visual mais sofisticada para valorizar marca, história e programação.
-            </p>
-            <div className="flex flex-wrap gap-6">
-              {gallery.map((item) => (
-                <span key={item} className="text-xs uppercase tracking-widest text-grafite/60 bg-linho px-3 py-2 rounded-full shadow-sm">{item}</span>
+            <div className="space-y-8 pt-2">
+              {menuHighlights.map((item) => (
+                <article key={item.date} className="border-t border-grafite/15 pt-5">
+                  <p className="text-[11px] uppercase tracking-[0.24em] text-vinho">{item.day} • {item.date}</p>
+                  <p className="mt-3 text-lg leading-relaxed">{item.dish}</p>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="contato" className="mx-auto max-w-4xl px-4 pb-20 pt-14 md:px-8">
-          <h2 className="font-display text-3xl md:text-4xl mb-8">Contato</h2>
-          <div className="flex flex-col md:flex-row gap-12 text-base">
+        <section id="programacao" className="mx-auto max-w-7xl px-4 py-16 md:px-10">
+          <div className="editorial-grid">
             <div>
-              <span className="block text-xs uppercase tracking-widest text-grafite/60 mb-2">Endereço</span>
-              <span className="block">Rua Antonio de Albuquerque, 781<br />Savassi - Belo Horizonte</span>
+              <p className="section-kicker">Programacao</p>
+              <h2 className="font-display text-4xl leading-tight md:text-6xl">Uma casa em movimento, todos os dias.</h2>
             </div>
-            <div>
-              <span className="block text-xs uppercase tracking-widest text-grafite/60 mb-2">Telefones</span>
-              <span className="block">(31) 98424-4285<br />(31) 2555-1610</span>
+            <div className="space-y-7 pt-2">
+              {schedule.map((item) => (
+                <div key={item.title} className="border-t border-grafite/15 pt-5">
+                  <p className="text-[11px] uppercase tracking-[0.24em] text-vinho">{item.date}</p>
+                  <p className="mt-2 text-xl leading-snug">{item.title}</p>
+                  <p className="mt-2 text-sm uppercase tracking-[0.18em] text-grafite/60">{item.price}</p>
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
+
+        <section id="eventos" className="mx-auto max-w-7xl px-4 py-16 md:px-10">
+          <div className="space-y-10 border-y border-grafite/15 py-12">
+            <div className="md:max-w-3xl">
+              <p className="section-kicker">Eventos em destaque</p>
+              <h2 className="font-display text-4xl leading-tight md:text-6xl">Agenda curada entre musica, arte e encontros literarios.</h2>
+            </div>
+
+            {upcomingEvents.map((event, index) => (
+              <article key={event.title} className="grid gap-4 border-t border-grafite/15 pt-6 md:grid-cols-[180px_1fr] md:gap-10">
+                <p className="text-[11px] uppercase tracking-[0.24em] text-vinho">0{index + 1}</p>
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.24em] text-grafite/60">{event.when}</p>
+                  <h3 className="mt-2 font-display text-3xl leading-tight">{event.title}</h3>
+                  <p className="mt-3 max-w-3xl leading-relaxed text-grafite/80">{event.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="noticias" className="mx-auto max-w-7xl px-4 py-16 md:px-10">
+          <div className="editorial-grid">
             <div>
-              <span className="block text-xs uppercase tracking-widest text-grafite/60 mb-2">Horários</span>
-              <span className="block">Presencial: 12h - 22h/23h<br />Delivery: 11h - 21h30</span>
+              <p className="section-kicker">Noticias</p>
+              <h2 className="font-display text-4xl leading-tight md:text-6xl">Comunicados e movimentos da casa.</h2>
+            </div>
+            <ul className="space-y-7 pt-2">
+              {news.map((item) => (
+                <li key={item} className="border-t border-grafite/15 pt-5 text-lg leading-relaxed">{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section id="sobre" className="mx-auto max-w-7xl px-4 py-16 md:px-10">
+          <div className="editorial-grid">
+            <div>
+              <p className="section-kicker">Sobre</p>
+              <h2 className="font-display text-4xl leading-tight md:text-6xl">Um polo cultural no coracao da Savassi.</h2>
+            </div>
+            <div className="space-y-8 pt-2">
+              <p className="leading-relaxed text-grafite/80">
+                Fundado em 1996, o Cafe com Letras se consolidou como ponto de convergencia entre gastronomia, literatura e musica. Esta demo unifica o conteudo existente em uma linguagem mais sofisticada e contemporanea.
+              </p>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {gallery.map((item) => (
+                  <p key={item} className="border-t border-grafite/15 pt-3 text-[11px] uppercase tracking-[0.2em] text-grafite/65">{item}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="fotos" className="mx-auto max-w-7xl px-4 py-16 md:px-10">
+          <p className="section-kicker">Assets</p>
+          <h2 className="font-display text-4xl leading-tight md:text-6xl">Area pronta para suas fotos.</h2>
+          <p className="mt-4 max-w-2xl text-grafite/75">
+            Assim que voce enviar os arquivos em src/assets com os nomes indicados nas legendas, eu conecto cada imagem no lugar certo.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {[1, 2, 3, 4, 5, 6].map((index) => (
+              <figure key={index} className="photo-slot">
+                <div className="photo-placeholder">FOTO {index}</div>
+                <figcaption>usar arquivo: foto-{index}.jpg</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
+        <section id="contato" className="mx-auto max-w-7xl px-4 pt-16 md:px-10">
+          <div className="border-t border-grafite/20 py-12">
+            <p className="section-kicker">Contato</p>
+            <h2 className="font-display text-4xl leading-tight md:text-6xl">Rua Antonio de Albuquerque, 781.</h2>
+            <div className="mt-10 grid gap-8 text-sm uppercase tracking-[0.16em] text-grafite/70 md:grid-cols-3">
+              <p>Telefones<br /><span className="normal-case tracking-normal text-base text-grafite">(31) 98424-4285<br />(31) 2555-1610</span></p>
+              <p>Presencial<br /><span className="normal-case tracking-normal text-base text-grafite">Dom a qui: 12h as 22h<br />Sex e sab: 12h as 23h</span></p>
+              <p>Delivery<br /><span className="normal-case tracking-normal text-base text-grafite">Seg a dom: 11h as 21h30</span></p>
             </div>
           </div>
         </section>

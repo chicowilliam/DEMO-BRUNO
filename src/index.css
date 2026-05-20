@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
-  --linho: #f5f1ea;
-  --creme: #f1e5d6;
-  --damasco: #f0d2b0;
-  --grafite: #1f1a18;
-  --vinho: #6d1f34;
+  --linho: #f1ece3;
+  --creme: #e9ddcb;
+  --damasco: #d6b893;
+  --grafite: #1b1714;
+  --vinho: #612638;
 }
 
 * {
@@ -20,12 +20,23 @@ body,
 }
 
 body {
-  background: var(--linho);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(214, 184, 147, 0.15) 0, rgba(214, 184, 147, 0) 40%),
+    radial-gradient(circle at 90% 80%, rgba(97, 38, 56, 0.12) 0, rgba(97, 38, 56, 0) 35%),
+    var(--linho);
   color: var(--grafite);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
 }
 
 a {
@@ -52,25 +63,58 @@ a {
   animation-delay: 0.15s;
 }
 
-.ambient-shape {
-  pointer-events: none;
-  position: fixed;
-  z-index: 0;
-  width: 280px;
-  height: 280px;
-  border-radius: 9999px;
-  filter: blur(70px);
-  opacity: 0.35;
+.editorial-grid {
+  display: grid;
+  gap: 2.5rem;
 }
 
-.ambient-shape-left {
-  left: -80px;
-  top: 100px;
-  background: #d6a075;
+.section-kicker {
+  margin: 0 0 0.6rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(27, 23, 20, 0.6);
 }
 
-.ambient-shape-right {
-  right: -80px;
-  top: 40%;
-  background: #a8485f;
+.editorial-ticker {
+  border-top: 1px solid rgba(27, 23, 20, 0.2);
+  border-bottom: 1px solid rgba(27, 23, 20, 0.2);
+  padding: 0.85rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(27, 23, 20, 0.75);
+}
+
+.photo-slot {
+  margin: 0;
+}
+
+.photo-slot figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(27, 23, 20, 0.58);
+}
+
+.photo-placeholder {
+  display: flex;
+  min-height: 190px;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(27, 23, 20, 0.2);
+  border-bottom: 1px solid rgba(27, 23, 20, 0.2);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(27, 23, 20, 0.56);
+}
+
+@media (min-width: 900px) {
+  .editorial-grid {
+    grid-template-columns: 1fr 1.1fr;
+  }
 }
