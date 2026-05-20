@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        linho: '#eef2ea',
-        creme: '#dfe8da',
-        damasco: '#b8cda8',
-        grafite: '#152019',
-        vinho: '#2f6b4f',
+        linho: '#efe2c6',
+        creme: '#e3d4b2',
+        damasco: '#c97649',
+        grafite: '#312a1d',
+        vinho: '#616f28',
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],

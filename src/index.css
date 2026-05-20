@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
-  --linho: #eef2ea;
-  --creme: #dfe8da;
-  --damasco: #b8cda8;
-  --grafite: #152019;
-  --vinho: #2f6b4f;
-  --ink-rgb: 21, 32, 25;
+  --linho: #efe2c6;
+  --creme: #e3d4b2;
+  --damasco: #c97649;
+  --grafite: #312a1d;
+  --vinho: #616f28;
+  --ink-rgb: 49, 42, 29;
 }
 
 * {
@@ -22,8 +22,15 @@ body,
 
 body {
   background:
-    radial-gradient(circle at 10% 10%, rgba(184, 205, 168, 0.2) 0, rgba(184, 205, 168, 0) 42%),
-    radial-gradient(circle at 90% 80%, rgba(47, 107, 79, 0.12) 0, rgba(47, 107, 79, 0) 38%),
+    radial-gradient(circle at 12% 12%, rgba(97, 111, 40, 0.2) 0, rgba(97, 111, 40, 0) 36%),
+    radial-gradient(circle at 88% 82%, rgba(201, 118, 73, 0.18) 0, rgba(201, 118, 73, 0) 34%),
+    repeating-linear-gradient(
+      42deg,
+      rgba(97, 111, 40, 0.045) 0,
+      rgba(97, 111, 40, 0.045) 7px,
+      rgba(97, 111, 40, 0) 7px,
+      rgba(97, 111, 40, 0) 15px
+    ),
     var(--linho);
   color: var(--grafite);
   font-family: 'Manrope', sans-serif;
@@ -74,7 +81,7 @@ a {
   font-size: 0.68rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(var(--ink-rgb), 0.62);
+  color: rgba(97, 111, 40, 0.88);
 }
 
 .editorial-ticker {
@@ -149,7 +156,7 @@ a {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: rgba(var(--ink-rgb), 0.65);
+  color: rgba(97, 111, 40, 0.85);
 }
 
 .photo-placeholder {
