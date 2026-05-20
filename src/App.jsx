@@ -23,24 +23,26 @@ const schedule = [
   { date: '24/05 • 13:00', title: 'Contraponto de Encontro: Brás Cubas', price: 'R$ 40 ou livro' },
 ]
 
-const upcomingEvents = [
+const mediaAssets = [
   {
-    title: 'Oficina de Carimbos com Lívia Cristina LC',
-    when: '21/05/2026 • 16:00',
-    description:
-      'Uma experiência prática de 2h que conecta livro, arte e criação manual. Vagas limitadas para manter o formato intimista.',
+    src: new URL('./assets/hero.png', import.meta.url).href,
+    type: 'image',
+    label: 'Fachada e identidade da casa',
   },
   {
-    title: 'Savassi Festival: Nova Onda + Trinka (Portugal)',
-    when: '25/05/2026 • 20:00',
-    description:
-      'Uma noite em diálogo entre música afro-brasileira e sonoridades lusófonas, trazendo repertório autoral e atmosfera de celebração.',
+    src: new URL('./assets/prato vegano.jpg', import.meta.url).href,
+    type: 'image',
+    label: 'Prato vegano',
   },
   {
-    title: 'Matheus Avelar Quarteto + Quarteto Crescente',
-    when: '26/05/2026 • 19:30',
-    description:
-      'Duas formações instrumentais da nova cena mineira no mesmo couvert, com forte presença de jazz contemporâneo.',
+    src: new URL('./assets/calçada do cafe.mp4', import.meta.url).href,
+    type: 'video',
+    label: 'Calcada do cafe',
+  },
+  {
+    src: new URL('./assets/video do carpaccio.mp4', import.meta.url).href,
+    type: 'video',
+    label: 'Video do carpaccio',
   },
 ]
 
@@ -70,7 +72,6 @@ function App() {
           <nav className="hidden gap-8 text-[11px] uppercase tracking-[0.24em] md:flex">
             <a href="#cardapio" className="opacity-75 transition hover:opacity-100">Cardapio</a>
             <a href="#programacao" className="opacity-75 transition hover:opacity-100">Programacao</a>
-            <a href="#eventos" className="opacity-75 transition hover:opacity-100">Eventos</a>
             <a href="#sobre" className="opacity-75 transition hover:opacity-100">Sobre</a>
             <a href="#contato" className="opacity-75 transition hover:opacity-100">Contato</a>
           </nav>
@@ -142,26 +143,6 @@ function App() {
           </div>
         </section>
 
-        <section id="eventos" className="mx-auto max-w-7xl px-4 py-16 md:px-10">
-          <div className="space-y-10 border-y border-grafite/15 py-12">
-            <div className="md:max-w-3xl">
-              <p className="section-kicker">Eventos em destaque</p>
-              <h2 className="font-display text-4xl leading-tight md:text-6xl">Agenda curada entre musica, arte e encontros literarios.</h2>
-            </div>
-
-            {upcomingEvents.map((event, index) => (
-              <article key={event.title} className="grid gap-4 border-t border-grafite/15 pt-6 md:grid-cols-[180px_1fr] md:gap-10">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-vinho">0{index + 1}</p>
-                <div>
-                  <p className="text-[11px] uppercase tracking-[0.24em] text-grafite/60">{event.when}</p>
-                  <h3 className="mt-2 font-display text-3xl leading-tight">{event.title}</h3>
-                  <p className="mt-3 max-w-3xl leading-relaxed text-grafite/80">{event.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section id="noticias" className="mx-auto max-w-7xl px-4 py-16 md:px-10">
           <div className="editorial-grid">
             <div>
@@ -197,15 +178,19 @@ function App() {
 
         <section id="fotos" className="mx-auto max-w-7xl px-4 py-16 md:px-10">
           <p className="section-kicker">Assets</p>
-          <h2 className="font-display text-4xl leading-tight md:text-6xl">Area pronta para suas fotos.</h2>
+          <h2 className="font-display text-4xl leading-tight md:text-6xl">Galeria do cafe.</h2>
           <p className="mt-4 max-w-2xl text-grafite/75">
-            Assim que voce enviar os arquivos em src/assets com os nomes indicados nas legendas, eu conecto cada imagem no lugar certo.
+            Midias ja conectadas diretamente da pasta assets para apresentar atmosfera, pratos e movimento da casa.
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((index) => (
-              <figure key={index} className="photo-slot">
-                <div className="photo-placeholder">FOTO {index}</div>
-                <figcaption>usar arquivo: foto-{index}.jpg</figcaption>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {mediaAssets.map((item) => (
+              <figure key={item.label} className="photo-slot">
+                {item.type === 'video' ? (
+                  <video className="media-frame" src={item.src} autoPlay loop muted playsInline controls={false} />
+                ) : (
+                  <img className="media-frame" src={item.src} alt={item.label} loading="lazy" />
+                )}
+                <figcaption>{item.label}</figcaption>
               </figure>
             ))}
           </div>

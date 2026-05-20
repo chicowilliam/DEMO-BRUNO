@@ -100,6 +100,16 @@ a {
   color: rgba(27, 23, 20, 0.58);
 }
 
+.media-frame {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  max-height: 340px;
+  object-fit: cover;
+  border-top: 1px solid rgba(27, 23, 20, 0.2);
+  border-bottom: 1px solid rgba(27, 23, 20, 0.2);
+}
+
 .photo-placeholder {
   display: flex;
   min-height: 190px;
